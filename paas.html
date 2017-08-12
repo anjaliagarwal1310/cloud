@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>paas cloud</title>
+<style>
+html {
+	background: url("cloud.jpg") no-repeat center fixed;
+	background-size: cover;
+}
+
+body {
+  color: #ffffff;
+  
+}
+
+img {
+   margin-right:15px;
+}
+
+.home {
+    float: right;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.code {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 10px;
+    margin: 5px 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+<a href="/services.html"><button type="button" class="home" >HOME</button></a>
+<h1><b>SAAS CLOUD SERVICES</b></h1>
+</br>
+<form action="/cgi-bin/paas.cgi" method="POST">
+<input type="radio" name="p" value="python" ><img src="python.jpg" alt="python" style="width:150px;height:150px;border:0;">
+<input type="radio" name="p" value="ruby" ><img src="ruby.jpg" alt="ruby" style="width:150px;height:150px;border:0;">
+<input type="radio" name="p" value="perl" ><img src="perl.jpg" alt="perl" style="width:150px;height:150px;border:0;"></br></br>
+<input type="submit" value="start coding" class="code">
+</form>
+
+<!--
+<form action="/cgi-bin/paas.cgi" method="POST">
+<fieldset>
+<legend>paas services</legend>
+<input type="radio" name="p" value="python" >python</br>
+<input type="radio" name="p" value="ruby">ruby</br>
+<input type="radio" name="p" value="perl">perl</br>
+<input type="submit" value="start coding">
+</fieldset>
+</form>
+-->
+</body>
+</html>
+

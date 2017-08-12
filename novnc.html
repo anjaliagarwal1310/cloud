@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>Iaas Cloud</title>
+<style>
+html {
+	background: url("cloud.jpg") no-repeat center fixed;
+	background-size: cover;
+}
+
+body {
+  color: #ffffff;
+  
+}
+
+table, th, td {
+    border: 1px solid white;
+    
+}
+
+td {
+ text-align: center;
+}
+
+th, td {
+    padding: 15px;
+}
+
+tr:hover {
+   opacity: 0.3;
+}
+
+div {
+	float: left; 
+}
+
+button {
+    float: right;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.iaas {
+    float: left;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+</style>
+
+</head>
+
+<body>
+<a href="/services.html"><button type="button" >HOME</button></a>
+<form action="/cgi-bin/novnc.cgi" method="POST" target="_blank">
+<input type="submit" value="GET IAAS" class="iaas"></br></br></br>
+
+<div>
+<input type="text" name="o" placeholder="os name" required><br>
+<input type="text" name="n" placeholder="enter port no(>6000)" required><br>
+</div>
+</br></br></br>
+
+<table style="width:100%" id="t01">
+<caption>iaas cloud</caption>
+<tr>
+<th>SELECT</th>
+<th>operating system</th>
+<th>RAM</th>
+<th>CPU Core</th>
+</tr>
+
+<tr>
+<td><input type="radio" name="r" value="iaas1"></td>
+<td>Kali(Live)</td>
+<td>512MB</td>
+<td>1 Core Cpu</td>
+</tr>
+
+<tr>
+<td><input type="radio" name="r" value="iaas2"></td>
+<td>RedHat </td>
+<td>1024MB</td>
+<td>1 Core Cpu</td>
+</tr>
+
+<tr>
+<td><input type="radio" name="r" value="iaas3"></td>
+<td>RedHat </td>
+<td>1024MB</td>
+<td>2 Core Cpu</td>
+</tr>
+
+<tr>
+<td><input type="radio" name="r" value="iaas4"></td>
+<td>RedHat </td>
+<td>2048MB</td>
+<td>1 Core Cpu</td>
+</tr>
+
+<tr>
+<td><input type="radio" name="r" value="iaas4"></td>
+<td>RedHat </td>
+<td>2048MB</td>
+<td>2 Core Cpu</td>
+</tr>
+
+</table>
+
+</form>
+</body>
+</html>
+

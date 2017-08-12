@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>staas cloud</title>
+<style>
+html {
+	background: url("cloud.jpg") no-repeat center fixed;
+	background-size: cover;
+}
+
+body {
+  color: #ffffff;
+  margin: 0;
+}
+
+img {
+     margin: 15px 15px;
+}
+
+h1 {
+   text-align: center;
+   font-weight: bold;
+}
+
+/* div for block storage */
+.container1 {
+    margin-left: 450px;
+    margin-right: 20px;
+    width: 325px;
+    height: 325px;
+    position: relative;
+    display: inline-block;
+}
+
+.container2 {
+    margin-left: 450px;
+    margin-right: 20px;
+    right: 0px;
+    width: 325px;
+    height: 325px;
+    position: relative;
+    display: inline-block;
+}
+
+
+.image1, .image2 {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle1, .middle2 {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container1:hover .image1 {
+  opacity: 0.3;
+}
+
+.container2:hover .image2 {
+  opacity: 0.3;
+}
+
+.container1:hover .middle1 {
+  opacity: 1;
+}
+
+.container2:hover .middle2 {
+  opacity: 1;
+}
+
+.text1, .text1 {
+  color: white;
+  font-size: 16px;
+}
+
+.home {
+    float: right;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.blocks, .objects {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=radio] {
+     padding-right: 5px;
+}
+
+.l {
+    font-size: 25px;
+}
+</style>
+</head>
+
+<body>
+<a href="/services.html"><button type="button" class="home" >HOME</button></a>
+<h1><b>STORAGE TYPE</b></h1>
+</br>
+<form action="/cgi-bin/blockd.cgi" method="POST">
+<div class="container1">
+<img src="block1.jpg" alt="block storage" class="image1" style="width:100%" > 
+  <div class="middle1">
+    <div class="text1">
+<input type="text" name="d" placeholder="enter drive name" required></br>
+<input type="text" name="s" placeholder="enter drive size" required>
+</div>
+  </div>
+</div>
+<button type="submit" class="blocks">Block Storage</button>
+</form>
+
+<!--object storage-->
+<form action="/cgi-bin/os.cgi" method="POST">
+<div class="container2">
+<img src="object.png" alt="block storage" class="image2" style="width:100%" > 
+  <div class="middle2">
+    <div class="text2">
+<input type="text" name="d" placeholder="enter drive name" required></br>
+<input type="text" name="s" placeholder="enter drive size" required></br>
+<input type="radio" name="p" value="Linux" required> <b class="l">LINUX</b></br>
+<input type="radio" name="p" value="Windows" required> <b class="l">WINDOWS</b>
+</div>
+  </div>
+</div>
+<button type="submit" class="blocks">Object Storage</button>
+</form>
+
+</body>
+</html>
+
